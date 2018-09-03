@@ -14,9 +14,9 @@ export default class App extends Component {
     console.log('hello world');
     return (
       <View style={styles.container}>
-        <View style={[styles.boxStyle, {backgroundColor: 'red'} ]} />
-        <View style={[styles.boxStyle, {backgroundColor: 'green'} ]} />
-        <View style={[styles.boxStyle, {backgroundColor: 'blue'} ]} />
+        <View style={[styles.boxStyle, { flexGrow: 1, backgroundColor: 'red'} ]} />
+        <View style={[styles.boxStyle, { flexGrow: 2, backgroundColor: 'green'} ]} />
+        <View style={[styles.boxStyle, { flexGrow: 1, backgroundColor: 'blue'} ]} />
       </View>
     );
   }
