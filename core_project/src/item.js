@@ -8,9 +8,9 @@ import {
 
 const { width, height } = Dimensions.get('window');
 
-const Item = ({color = 'tomato' }) => (
+const Item = ({ item }) => (
     <View style={{ height }}>
-        <View style={[styles.header, {backgroundColor: color}]} />
+        <View style={[styles.header, {backgroundColor: item.color}]} />
         <View style={[styles.footer]}>
             <View style={[styles.left]}>
                 <Text style={styles.title}>RN EU</Text>
