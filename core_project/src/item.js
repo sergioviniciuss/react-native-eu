@@ -13,10 +13,10 @@ const Item = ({ item }) => (
         <View style={[styles.header, {backgroundColor: item.color}]} />
         <View style={[styles.footer]}>
             <View style={[styles.left]}>
-                <Text style={styles.title}>RN EU</Text>
+                <Text style={styles.title}>{item.title}</Text>
             </View>
             <View style={[styles.right]}>
-                <Text style={styles.desc}>Best RN conference</Text>
+                <Text style={styles.desc}>{item.description}</Text>
             </View>
         </View>
     </View>

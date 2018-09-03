@@ -19,7 +19,8 @@ import {
   TouchableWithoutFeedback,
   Image,
   ScrollView,
-  Dimensions
+  Dimensions,
+  FlatList
 } from 'react-native';
 import Item from './src/item';
 import CarouselItem from './src/CarouselItem';
@@ -47,16 +48,21 @@ const itemsList = [
 export default class App extends Component {
   render() {
     return (
-      <ScrollView
-        style={{flex:1}}
-      >
-        {itemsList.map(item => (
-          <Item 
-            key={item.id} 
-            item={item} 
-          />
-        ))}
-      </ScrollView>
+      <FlatList 
+        data={itemsList}
+        renderItem={({ item }) => <Item item={item} />}
+        keyExtractor={item => `${item.id}`} 
+      />
+      // <ScrollView
+      //   style={{flex:1}}
+      // >
+      //   {itemsList.map(item => (
+      //     <Item 
+      //       key={item.id} 
+      //       item={item} 
+      //     />
+      //   ))}
+      // </ScrollView>
     );
   }
 };
