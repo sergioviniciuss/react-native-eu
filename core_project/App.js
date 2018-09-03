@@ -23,6 +23,12 @@ import {
 } from 'react-native';
 import Item from './src/item';
 
+const itemsList = [
+  'tomato',
+  'blue',
+  'palevioletred',
+  '#ff00aa'
+]
 export default class App extends Component {
   state = {
     text: ''
@@ -31,9 +37,9 @@ export default class App extends Component {
     console.log('hello world');
     return (
       <ScrollView style={{flex:1}}>
-        <Item />
-        <Item color="palevioletred"/>
-        <Item color="tomato"/>
+        {itemsList.map(color => (
+          <Item key={color} color={color} />
+        ))}
       </ScrollView>
     );
   }
