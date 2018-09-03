@@ -7,7 +7,7 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, TextInput, Text, View} from 'react-native';
+import {Platform, StyleSheet, TextInput, Text, Alert, View} from 'react-native';
 
 export default class App extends Component {
   state = {
@@ -20,7 +20,7 @@ export default class App extends Component {
         <TextInput
           placeholder='Type something'
           onChangeText={text =>this.setState({text})}
-          onSubmitEditing={() => { }}
+          onSubmitEditing={() => Alert.alert('Success', 'you finished typing')}
           style={{fontSize: 30}}
         />
         
