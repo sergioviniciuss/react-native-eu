@@ -48,11 +48,13 @@ const itemsList = [
 export default class App extends Component {
   render() {
     return (
+      // flatlist renders only what is visible on the screen
       <FlatList 
         data={itemsList}
         renderItem={({ item }) => <Item item={item} />}
         keyExtractor={item => `${item.id}`} 
       />
+      // ScrollView renders everything at once.
       // <ScrollView
       //   style={{flex:1}}
       // >
