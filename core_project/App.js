@@ -29,7 +29,7 @@ export default class App extends Component {
     return (
       <View style={styles.container}>
         <Image
-          source={{ uri: 'https://images.unsplash.com/photo-1535690862765-8f7b36fdb06d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=61ee1debc781c0bf9174a1a98c3868db&auto=format&fit=crop&w=975&q=80'}}
+          source={require('./assets/photo.jpeg')}
           style={{ height: 100, width: '100%' }}
         />
       </View>
