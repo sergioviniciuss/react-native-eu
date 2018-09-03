@@ -14,9 +14,9 @@ export default class App extends Component {
     console.log('hello world');
     return (
       <View style={styles.container}>
-        <View style={styles.boxStyle} />
-        <View style={{ width:50, height:50, backgroundColor: 'green' }} />
-        <View style={{ width:50, height:50, backgroundColor: 'blue' }} />
+        <View style={[styles.boxStyle, {backgroundColor: 'red'} ]} />
+        <View style={[styles.boxStyle, {backgroundColor: 'green'} ]} />
+        <View style={[styles.boxStyle, {backgroundColor: 'blue'} ]} />
       </View>
     );
   }
@@ -24,5 +24,5 @@ export default class App extends Component {
 
 const styles = StyleSheet.create({
   container: { flexDirection: 'row', flex: 1, justifyContent: 'center', alignItems: 'center' },
-  boxStyle: { width: 50, height: 50, backgroundColor: 'red' },
+  boxStyle: { width: 50, height: 50},
 })
