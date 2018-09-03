@@ -7,7 +7,17 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, TextInput, Text, Alert, View} from 'react-native';
+import {
+  Platform, 
+  StyleSheet, 
+  TextInput, 
+  Text,
+  Alert, 
+  View,
+  TouchableOpacity,
+  TouchableHighlight,
+  TouchableWithoutFeedback
+} from 'react-native';
 
 export default class App extends Component {
   state = {
@@ -17,15 +27,21 @@ export default class App extends Component {
     console.log('hello world');
     return (
       <View style={styles.container}>
-        <TextInput
-          placeholder='Type something'
-          onChangeText={text =>this.setState({text})}
-          onSubmitEditing={() => Alert.alert('Success', 'you finished typing')}
-          secureTextEntry={true}
-          style={{fontSize: 30}}
-        />
-        
-        <Text>{this.state.text}</Text>
+        <TouchableHighlight onPress={() =>{}} underlayColor="red">
+          <View>
+            <Text>TouchableHighlight</Text>
+          </View>
+        </TouchableHighlight>
+        <TouchableOpacity onPress={() =>{}} activeOpacity={0.5}>
+          <View>
+            <Text>TouchableOpacity</Text>
+          </View>
+        </TouchableOpacity>
+        <TouchableWithoutFeedback onPress={() =>{}}>
+          <View>
+            <Text>TouchableWithoutFeedback</Text>
+          </View>
+        </TouchableWithoutFeedback>
       </View>
     );
   }
