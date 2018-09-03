@@ -18,7 +18,10 @@ import {
   TouchableHighlight,
   TouchableWithoutFeedback,
   Image,
+  ScrollView,
+  Dimensions
 } from 'react-native';
+import Item from './src/item';
 
 export default class App extends Component {
   state = {
@@ -27,27 +30,11 @@ export default class App extends Component {
   render() {
     console.log('hello world');
     return (
-      <View style={styles.container}>
-        <View style={[styles.header]} />
-        <View style={[styles.footer]}>
-          <View style={[styles.left]}>
-            <Text style={styles.title}>RN EU</Text>
-          </View>
-          <View style={[styles.right]}>
-            <Text style={styles.desc}>Best RN conference</Text>
-          </View>
-        </View>
-      </View>
+      <ScrollView style={{flex:1}}>
+        <Item />
+        <Item color="palevioletred"/>
+        <Item color="tomato"/>
+      </ScrollView>
     );
   }
-}
-
-const styles = StyleSheet.create({
-  container: { flexDirection: 'column', flex: 1, justifyContent: 'center', alignItems: 'center' },
-  header: { flexDirection: 'row', flexGrow: 2, backgroundColor: 'red', width: '100%' },
-  footer: { flexDirection: 'row', flexGrow: 1, backgroundColor: 'white'},
-  left: { flex: 1, alignItems: 'center', justifyContent: 'center' },
-  right: { flex: 1, alignItems: 'center', justifyContent: 'center' },
-  title: { fontSize: 24, fontWeight: 'bold', },
-  desc: { fontSize: 16 }
-})
+};
