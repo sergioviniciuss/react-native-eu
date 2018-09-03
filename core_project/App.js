@@ -22,6 +22,7 @@ import {
   Dimensions
 } from 'react-native';
 import Item from './src/item';
+import CarouselItem from './src/item';
 
 const itemsList = [
   'tomato',
@@ -38,7 +39,7 @@ export default class App extends Component {
     return (
       <ScrollView style={{flex:1}}>
         {itemsList.map(color => (
-          <Item key={color} color={color} />
+          <CarouselItem key={color} color={color} />
         ))}
       </ScrollView>
     );
