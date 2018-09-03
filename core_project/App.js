@@ -16,7 +16,8 @@ import {
   View,
   TouchableOpacity,
   TouchableHighlight,
-  TouchableWithoutFeedback
+  TouchableWithoutFeedback,
+  Image,
 } from 'react-native';
 
 export default class App extends Component {
@@ -27,21 +28,10 @@ export default class App extends Component {
     console.log('hello world');
     return (
       <View style={styles.container}>
-        <TouchableHighlight onPress={() =>{}} underlayColor="red">
-          <View>
-            <Text>TouchableHighlight</Text>
-          </View>
-        </TouchableHighlight>
-        <TouchableOpacity onPress={() =>{}} activeOpacity={0.5}>
-          <View>
-            <Text>TouchableOpacity</Text>
-          </View>
-        </TouchableOpacity>
-        <TouchableWithoutFeedback onPress={() =>{}}>
-          <View>
-            <Text>TouchableWithoutFeedback</Text>
-          </View>
-        </TouchableWithoutFeedback>
+        <Image
+          source={{ uri: 'https://images.unsplash.com/photo-1535690862765-8f7b36fdb06d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=61ee1debc781c0bf9174a1a98c3868db&auto=format&fit=crop&w=975&q=80'}}
+          style={{ height: 100, width: '100%' }}
+        />
       </View>
     );
   }
