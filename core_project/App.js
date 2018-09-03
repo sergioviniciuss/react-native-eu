@@ -21,6 +21,7 @@ export default class App extends Component {
           placeholder='Type something'
           onChangeText={text =>this.setState({text})}
           onSubmitEditing={() => Alert.alert('Success', 'you finished typing')}
+          secureTextEntry={true}
           style={{fontSize: 30}}
         />
         
