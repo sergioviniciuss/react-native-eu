@@ -1,10 +1,13 @@
-import React, { Component } from 'react';
-import { View, Dimensions } from 'react-native';
+import React from 'react';
+import { View, Dimensions, Image } from 'react-native';
 
 const { width, height } = Dimensions.get('window');
 
-const CarouselItem = ({ color = 'blue '}) => (
-    <View style={{ width, height, backgorundColor: color }} />
+const CarouselItem = ({ backgroundImg }) => (
+    <Image 
+        source={{uri:backgroundImg}} 
+        style={{ width, height, flex:1}}
+    />
 );
 
 export default CarouselItem;
