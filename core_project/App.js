@@ -7,25 +7,30 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, TextInput, View} from 'react-native';
+import {Platform, StyleSheet, TextInput, Text, View} from 'react-native';
 
 export default class App extends Component {
+  state = {
+    text: ''
+  }
   render() {
     console.log('hello world');
     return (
       <View style={styles.container}>
-      <TextInput
-        placeholder='Type something'
-        onChangeText={()=>{}}
-        onSubmitEditing={() => { }}
-        style={{fontSize: 30}}
-      />
+        <TextInput
+          placeholder='Type something'
+          onChangeText={text =>this.setState({text})}
+          onSubmitEditing={() => { }}
+          style={{fontSize: 30}}
+        />
+        
+        <Text>{this.state.text}</Text>
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  container: { flexDirection: 'row', flex: 1, justifyContent: 'center', alignItems: 'center' },
+  container: { flexDirection: 'column', flex: 1, justifyContent: 'center', alignItems: 'center' },
   boxStyle: { width: 50, height: 50},
 })
